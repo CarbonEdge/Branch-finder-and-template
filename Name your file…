@@ -1,0 +1,79 @@
+Enter file contents here</head>
+
+
+
+<body>
+
+
+/*user is the class/*
+
+<div data-ng-app="" ng-controller="formController">
+  <formnovalidate>
+
+    
+Alert number: :<br>
+    <input type="text" ng-model="user.Alert number:"><br>
+    
+Account number: <br>
+    <input type="text" ng-model="user.Account number:"><br>
+    
+Account name: <br>
+    <input type="text" ng-model="user.Account name:"> <br>   
+   
+ Account type: <br>
+    <input type="text" ng-model="user.Account type:">    <br>
+    
+Account Open Date: <br>
+    <input type="text" ng-model="user.Open Date:"><br>
+    
+Account Opening Branch: <br>
+    <input type="text" ng-model="user.Opening Branch:">    <br>
+    
+Current Balance: R: <br>
+    <input type="text" ng-model="user.Current Balance: R">    <br>
+
+Account Holder Identification number:  <br>
+    <input type="text" ng-model="user.Account Holder Identification number:"><br>
+
+Country of origin if not South African: <br>
+    <input type="text" ng-model="user.Country of origin if not South African:"><br>
+
+Date of Birth if not South African: <br>
+    <input type="text" ng-model="user.Date of Birth if not South African:"><br>
+
+Occupation: <br>
+    <input type="text" ng-model="user.Occupation:"><br>
+
+
+Contact number:  <br>
+    <input type="text" ng-model="user.Contact number:"><br>
+
+
+Address:  <br>
+    <input type="text" ng-model="user.Address:"><br>
+
+<br><br>
+    <button ng-click="reset()">RESET</button>
+  </form>
+   <p>form = {{user}}</p>
+   <p>master = {{master}}</p>
+
+</div>
+
+<script>
+ function formController ($scope) {
+     $scope.master = {};
+     $scope.reset = function() {
+        $scope.user = angular.copy($scope.master);
+    };
+    $scope.reset();
+};
+</script> 
+
+</script>
+
+
+</body>
+
+
+</html>
